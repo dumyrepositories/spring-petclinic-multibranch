@@ -1,11 +1,11 @@
 pipeline {
     agent any
-    triggers { pollSCM('* * * * *')}
+    triggers { pollSCM('* 9 * * 0')}
     stages {
         stage('VCS'){
             steps {
                 git url: 'https://github.com/dumyrepositories/spring-petclinic-multibranch.git',
-                    branch: 'main'
+                    branch: 'qt'
             }
         }
 
